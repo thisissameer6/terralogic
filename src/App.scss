@@ -158,6 +158,7 @@ p {
       text-transform: uppercase;
       cursor: pointer;
       transition: 0.5s;
+
       &:hover {
         color: var(--pink);
         letter-spacing: 1px;
@@ -267,34 +268,42 @@ p {
       padding: 30px;
       height: 100%;
       border-radius: 12px;
-      transition: 0.5s;
-
+      transition: 1s;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+      
       h3 {
         @include heading3(var(--dark), 24px, 600, '');
-        margin-bottom: 12px;
+        margin-left: 12px;
       }
 
       img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        &:hover{
+        background: #dfe6ff;
+        }
       }
 
       a {
-        @include text(var(--pink), 14px, 600);
+        @include text(var(--pink), 14px, 700);
         margin-top: 12px;
         display: block;
+        transition: 0.5s;
 
         &:hover {
           color: var(--blue);
+          letter-spacing: 1px;
         }
       }
 
       p {
-        @include heading3(var(--dark), 16px, 400, '');
+        margin-top: 12px;
+        @include heading3(var(--dark), 16px, 500, '');
       }
 
       &:hover {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow:none;
       }
     }
   }
@@ -307,7 +316,7 @@ p {
     }
 
     >.card {
-      @include grid(30px, space-between);
+      @include grid(0px, space-between);
       grid-template-columns: repeat(5, 1fr);
 
       >div {
@@ -420,10 +429,11 @@ footer {
     max-width: 20ch;
     cursor: pointer;
     transition: 0.5s;
-      &:hover {
-        color: var(--pink);
-        text-decoration: underline;
-      }
+
+    &:hover {
+      color: var(--pink);
+      text-decoration: underline;
+    }
   }
 
   >.links {
@@ -564,7 +574,8 @@ a {
   cursor: pointer;
   letter-spacing: 1px;
   text-transform: uppercase;
-transition: 1s;
+  transition: 1s;
+
   &:hover {
     background-color: var(--pink);
   }

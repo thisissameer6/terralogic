@@ -31,8 +31,10 @@ function Services() {
         <div className='services-cards'>
           {data.map(s => (
             <div key={s.id} >
+              <div style={{display: "flex", alignItems: "center"}}>
               <img src={s.image} alt={s.title} />
               <h3>{s.title}</h3>
+              </div>
               <p>{s.description}</p>
               <a href='/'>Know More</a>
             </div>
