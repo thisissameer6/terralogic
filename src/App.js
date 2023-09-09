@@ -4,6 +4,7 @@ import Services from './components/services';
 import Awards from './components/awards';
 import Footer from './components/footer';
 import Header from './components/header';
+import Work from './components/work';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HeroSection/>
       <Services/>
       <Awards/>
+      <Work/>
       <Footer/>
     </div>
   );
