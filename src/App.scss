@@ -145,6 +145,7 @@ p {
 .hero-section {
   @include grid(60px, space-between);
   grid-template-columns: repeat(2, 1fr);
+  background: linear-gradient(to bottom, #fff, #f6f8ff);
 
   .info {
     h1 {
