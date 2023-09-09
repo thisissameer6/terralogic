@@ -593,4 +593,8 @@ a {
 
 .blogs > div a{
   font-weight: 600;
+  transition: 0.5;
+  &:hover{
+    color: var(--blue);
+  }
 }
