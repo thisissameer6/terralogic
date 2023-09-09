@@ -10,7 +10,7 @@ function Header() {
         <li>CAREERS</li>
         <li>ABOUT US</li>
       </ul>
-      <button>CONTACT US</button>
+      <button className='button'>CONTACT US</button>
     </div>
   )
 }
