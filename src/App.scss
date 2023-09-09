@@ -141,6 +141,43 @@ p {
   --breakpoint-xl: 1200px;
 }
 
+.header {
+  @include flex(30px, space-between);
+  align-items: center;
+
+  img {
+    width: auto;
+    height: 50px;
+  }
+
+  ul {
+    @include flex(30px, space-between);
+
+    li {
+      @include heading3(var(--gray-dark), 14px, 600, '');
+      text-transform: uppercase;
+      cursor: pointer;
+
+    }
+  }
+
+  button {
+    padding: 16px 32px;
+    border-radius: 4px;
+    border: none;
+    @include heading1(var(--white), 12px, 700, '');
+    background-color: var(--purple);
+
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: var(--purple);
+    }
+  }
+}
+
 //hero-section
 .hero-section {
   @include grid(60px, space-between);
@@ -169,7 +206,7 @@ p {
       border: none;
       margin-top: 24px;
       @include heading1(var(--white), 14px, 700, '');
-      background-color: var(--pink);
+      background-color: var(--purple);
       cursor: pointer;
 
       &:hover {
@@ -186,6 +223,7 @@ p {
 //service
 .services {
   .head {
+    margin-top: 30px;
     h3 {
       @include heading3(var(--pink), 16px, 500, '');
     }
