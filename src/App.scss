@@ -148,8 +148,18 @@ p {
 
   .info {
     h1 {
-      @include heading1(var(--gray-dark), 52px, 800, '');
+      font-size: 52px;
       margin-bottom: 12px;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-linear-gradient(var(--pink), var(--purple), var(--primary));
+      -webkit-background-clip: text;
+      font-weight: 700;
+    }
+
+    p {
+      @include text(var(--gray-dark), 18px, 600);
+      line-height: 1.8;
+
     }
 
     button {
@@ -157,9 +167,13 @@ p {
       border-radius: 4px;
       border: none;
       margin-top: 24px;
-      @include heading1(var(--white), 16px, 600, '');
+      @include heading1(var(--white), 14px, 700, '');
       background-color: var(--pink);
       cursor: pointer;
+
+      &:hover {
+        background-color: var(--purple);
+      }
     }
   }
 
@@ -224,7 +238,7 @@ p {
   }
 
   .techs {
-    margin: 60px 0px;
+    margin-top: 80px;
 
     .title {
       margin-bottom: 30px
@@ -268,7 +282,7 @@ p {
 .awards {
   h2 {
     @include heading2(var(--gray-dark), 38px, 700, '');
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   .cards {
@@ -301,12 +315,14 @@ footer {
   background-color: var(--white);
 
   padding-top: 80px !important;
+
   .about-info {
     @include grid(60px, space-between);
     grid-template-columns: 2fr 1fr;
     margin-bottom: 45px;
     align-items: flex-start;
-    .icon-color{
+
+    .icon-color {
       font-size: 22px;
       margin-right: 12px;
     }
@@ -315,14 +331,15 @@ footer {
       @include text(var(--gray), 16px, 500);
       line-height: 1.7;
     }
-    h3{
+
+    h3 {
       @include text(var(--pink), 18px, 600);
       margin-bottom: 16px;
       letter-spacing: 2px;
       text-transform: uppercase
-      
     }
-    h2{
+
+    h2 {
       @include text(var(--gray-dark), 32px, 600);
       max-width: 24ch;
       margin-bottom: 8px;
