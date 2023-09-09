@@ -357,8 +357,8 @@ p {
   }
 
   .cards {
-    @include grid(60px, space-between);
-    grid-template-columns: repeat(4, 1fr);
+    @include grid(30px, space-between);
+    grid-template-columns: repeat(5, 1fr);
 
     >div {
       height: 100%;
@@ -366,7 +366,12 @@ p {
       img {
         width: auto;
         height: auto;
-        margin-bottom: 6px;
+      }
+      .award-img{
+        // background-color: red;
+        height: 100px;
+        display: flex;
+        align-items: center
       }
 
       p {
@@ -376,7 +381,9 @@ p {
       span {
         display: block;
         @include text(var(--gray), 14px, 600);
-        margin-top: 24px;
+        margin-top: 20px;
+        margin-bottom: 12px;
+
       }
     }
   }
@@ -392,7 +399,10 @@ footer {
     grid-template-columns: 2fr 1fr;
     margin-bottom: 45px;
     align-items: flex-start;
-
+    padding: 30px 0px;
+    border-bottom: 2px solid !important;
+    border-image-slice: 1 !important;
+    border-image-source: linear-gradient(270deg, #eda8ee, #ca9fff, #e9faff, #ca9fff, #eda8ee) !important;
     .icon-color {
       font-size: 22px;
       margin-right: 12px;
